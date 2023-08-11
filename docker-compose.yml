@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  dns:
+    image: "pschiffe/pdns-recursor"
+    ports:
+      - "53:53/udp"
+      - "53:53/tcp"
+  ntp:
+    image: "cturra/ntp"
+    ports:
+      - "123:123/udp"
+    environment:
+      - TZ=UTC
+      - NTP_SERVERS="time.cloudflare.com,time1.google.com,0.pool.ntp.org,2.pool.ntp.org"
