@@ -23,8 +23,12 @@ Edit /etc/systemd/resolved.conf uncommenting and changing the following two line
 DNS=1.1.1.2,9.9.9.9
 DNSStubListener=no
 ```
+Make the /etc/resolve.conf:
+```
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+```
 
-This changes requires a reboot of the machine to activate.
+This changes requires a reboot of the machine to activate so "sudo reboot"
 
 ## Activate the servers
 ```
