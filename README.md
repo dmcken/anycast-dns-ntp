@@ -38,5 +38,8 @@ docker compose up -d
 
 ## Testing Your server:
 ### Windows:
+#### NTP
+Open a command prompt:
+```
 w32tm /stripchart /dataonly /samples:5 /computer:<non-anycast IP of server>
-
+```
