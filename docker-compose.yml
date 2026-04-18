@@ -1,11 +1,11 @@
 services:
   dns:
-    image: "pschiffe/pdns-recursor"
+    image: "pschiffe/pdns-recursor:latest"
     ports:
       - "53:53/udp"
       - "53:53/tcp"
   ntp:
-    image: "cturra/ntp"
+    image: "cturra/ntp:latest"
     ports:
       - "123:123/udp"
     environment:
