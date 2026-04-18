@@ -1,6 +1,6 @@
 services:
   dns:
-    image: "pschiffe/pdns-recursor:latest"
+    image: "powerdns/pdns-recursor-54:latest"
     ports:
       - "53:53/udp"
       - "53:53/tcp"
