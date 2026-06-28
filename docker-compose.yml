@@ -13,7 +13,7 @@ services:
     cap_add:
       - SYS_TIME
     volumes:
-      - ./chrony.conf:/etc/chrony/chrony.conf:ro
+      - ./chrony.conf:/etc/chrony/chrony.conf
       - chrony-data:/var/lib/chrony
 volumes:
   chrony-data:
