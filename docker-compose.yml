@@ -13,7 +13,10 @@ services:
     cap_add:
       - SYS_TIME
     volumes:
-      - ./chrony.conf:/etc/chrony/chrony.conf
       - chrony-data:/var/lib/chrony
+    environment:
+      - TZ=UTC
+      - NTP_SERVERS="time.cloudflare.com time1.google.com"
+      - ENABLE_NTS=true
 volumes:
   chrony-data:
