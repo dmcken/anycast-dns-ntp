@@ -6,8 +6,8 @@ services:
       - "53:53/udp"
       - "53:53/tcp"
     environment:
-      - PDNS_local_address: "0.0.0.0 ::"
-      - PDNS_allow_from: "0.0.0.0/0 ::/0"
+      PDNS_local_address: "0.0.0.0 ::"
+      PDNS_allow_from: "0.0.0.0/0 ::/0"
   ntp:
     image: "cturra/ntp:latest"
     restart: unless-stopped
@@ -16,8 +16,8 @@ services:
     volumes:
       - chrony-data:/var/lib/chrony
     environment:
-      - TZ: "UTC"
-      - NTP_SERVERS: "time.cloudflare.com time1.google.com"
-      - ENABLE_NTS: true
+      TZ: "UTC"
+      NTP_SERVERS: "time.cloudflare.com time1.google.com"
+      ENABLE_NTS: true
 volumes:
   chrony-data:
