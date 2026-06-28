@@ -43,3 +43,10 @@ Open a command prompt:
 ```
 w32tm /stripchart /dataonly /samples:5 /computer:<non-anycast IP of server>
 ```
+
+### Docker
+
+#### NTP 
+```bash
+docker compose exec -it ntp chronyc tracking
+```
