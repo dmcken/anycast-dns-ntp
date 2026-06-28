@@ -10,6 +10,10 @@ services:
     restart: unless-stopped
     ports:
       - "123:123/udp"
-    environment:
-      - TZ=UTC
-      - NTP_SERVERS="time.cloudflare.com,time1.google.com,0.pool.ntp.org,2.pool.ntp.org"
+    cap_add:
+      - SYS_TIME
+    volumes:
+      - ./chrony.conf:/etc/chrony/chrony.conf:ro
+      - chrony-data:/var/lib/chrony
+volumes:
+  chrony-data:
