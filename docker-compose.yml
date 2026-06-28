@@ -13,11 +13,7 @@ services:
     restart: unless-stopped
     ports:
       - "123:123/udp"
-    volumes:
-      - chrony-data:/var/lib/chrony
-    environment:
-      TZ: "UTC"
-      NTP_SERVERS: "time.cloudflare.com time1.google.com"
-      ENABLE_NTS: true
-volumes:
-  chrony-data:
+    #environment:
+    #  TZ: "UTC"
+    #  NTP_SERVERS: "time.cloudflare.com time1.google.com"
+    #  ENABLE_NTS: true
