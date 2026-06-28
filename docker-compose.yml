@@ -5,7 +5,7 @@ services:
     ports:
       - "53:53/udp"
       - "53:53/tcp"
-    envionment:
+    environment:
       - PDNS_local_address: "0.0.0.0 ::"
       - PDNS_allow_from: "0.0.0.0/0 ::/0"
   ntp:
